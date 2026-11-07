@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# 掌机运行时生成的配置
+config.json
+wifi.json
+
+*.log
