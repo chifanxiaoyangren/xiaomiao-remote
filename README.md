@@ -6,9 +6,7 @@
 
 ![xiaomiao](image/xiaomiao.png)
 
-相关教程详见微信公众号：PY学习笔记 
 
-![xiaomiao](image/wx.jpg)
 
 ## 示例项目
 
