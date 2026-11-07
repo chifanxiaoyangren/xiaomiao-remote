@@ -8,6 +8,15 @@ ESP32 小喵掌机上的 **WiFi 记忆 + 手机网页配置 + 多主机 SSH 命�
 小喵掌机 --WiFi--> SSH 主机 --执行命令--> 目标
 ```
 
+## 获取项目
+
+```bash
+git clone https://github.com/chifanxiaoyangren/xiaomiao-remote.git
+cd xiaomiao-remote
+```
+
+后面的命令都在这个项目目录下执行，全部使用相对路径。
+
 ## 烧录镜像在哪
 
 **4MB flash 的板子使用这个镜像：**
@@ -16,17 +25,15 @@ ESP32 小喵掌机上的 **WiFi 记忆 + 手机网页配置 + 多主机 SSH 命�
 firmware/ESP32_SPIRAM_1.24_4MB.bin
 ```
 
-本地完整路径：
+项目目录下的文件位置：
 
 ```text
-/Users/dww/Desktop/xiaomiao-remote/firmware/ESP32_SPIRAM_1.24_4MB.bin
+<项目目录>/firmware/ESP32_SPIRAM_1.24_4MB.bin
 ```
 
-GitHub 仓库路径（如果仓库是私有的，需要先登录）：
+GitHub 上的文件：
 
-```text
-https://github.com/chifanxiaoyangren/xiaomiao-remote/blob/main/firmware/ESP32_SPIRAM_1.24_4MB.bin
-```
+[firmware/ESP32_SPIRAM_1.24_4MB.bin](firmware/ESP32_SPIRAM_1.24_4MB.bin)
 
 这个镜像是 **合并镜像**（bootloader + 分区表 + app），从 **`0x1000`** 地址写入。
 
@@ -143,7 +150,7 @@ python3 -m pip install mpremote
 ## 2. 进入项目目录
 
 ```bash
-cd /Users/dww/Desktop/xiaomiao-remote
+cd xiaomiao-remote
 ```
 
 ## 3. 创建字体目录
@@ -395,11 +402,11 @@ ssh -p 22 user@host 'systemctl restart nginx'
 
 macOS 的家目录是 `/Users/你的用户名`，不是 `/home/你的用户名`。
 
-例如当前用户 `dww`：
+例如你的用户名为 `yourname`：
 
 ```text
-正确：touch /Users/dww/sddd
-错误：touch /home/dww/sddd
+正确：touch ~/sddd
+错误：touch /home/yourname/sddd
 ```
 
 命令返回 `EXIT 1` 时，先检查是不是路径、权限或命令不存在。
@@ -664,7 +671,7 @@ python3 -m mpremote connect <PORT> cp config.example.json :config.json
 
 ```bash
 python3 -m pip install cryptography
-cd /Users/dww/Desktop/xiaomiao-remote
+cd xiaomiao-remote
 python3 - <<'PY'
 import sys
 sys.path.insert(0, ".")
