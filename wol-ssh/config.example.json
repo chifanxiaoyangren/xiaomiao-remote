@@ -1,0 +1,24 @@
+{
+  "hosts": [
+    {
+      "alias": "Mac mini",
+      "host": "192.168.31.128",
+      "port": 22,
+      "user": "dww",
+      "password": "change-me",
+      "fingerprint": ""
+    },
+    {
+      "alias": "NAS",
+      "host": "192.168.1.10",
+      "port": 22,
+      "user": "admin",
+      "password": "change-me",
+      "fingerprint": ""
+    }
+  ],
+  "commands": [
+    {"alias": "唤醒电脑", "command": "wol AA:BB:CC:DD:EE:FF"},
+    {"alias": "重启 nginx", "command": "systemctl restart nginx"}
+  ]
+}

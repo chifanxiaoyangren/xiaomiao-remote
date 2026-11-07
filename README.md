@@ -10,6 +10,10 @@
 
 ![xiaomiao](image/wx.jpg)
 
+## 示例项目
+
+- [`wol-ssh/`](wol-ssh/README.md)：记住多个 WiFi、手机网页配置、按 A 键通过 SSH 在远端主机执行 `wol` 唤醒电脑。
+
 ## 硬件资源一览
 
 - 主控：ESP32
